@@ -5,7 +5,7 @@ require_relative 'spec_helper'
 describe 'user' do
   before do
     # sql = "DROP TABLE IF EXISTS users"
-    ActiveRecord::Base.connection #.execute(sql)
+    ActiveRecord::Base.connect #ion.execute(sql)
     CreateUsers.new.down
     CreateUsers.new.up
   end
